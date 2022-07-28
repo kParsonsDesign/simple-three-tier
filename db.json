@@ -1,14 +1,9 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "item 1, initial setup",
-      "published": true
-    },
-    {
       "id": 2,
       "title": "item 2, initial setup",
-      "published": true
+      "published": false
     },
     {
       "id": 3,
@@ -18,11 +13,11 @@
     {
       "id": 4,
       "title": "item 4, initial setup",
-      "published": true
+      "published": false
     },
     {
-      "id": 5,
-      "title": "item 5, initial setup",
+      "id": 6,
+      "title": "newAdd6",
       "published": true
     },
     {
@@ -36,9 +31,19 @@
       "published": false
     },
     {
-      "id": 9,
-      "title": "newAdd9",
+      "id": 10,
+      "title": "New Post Title10",
+      "published": false
+    },
+    {
+      "id": 11,
+      "title": "another new post11",
       "published": true
+    },
+    {
+      "id": 12,
+      "title": "test post",
+      "published": false
     }
   ]
 }

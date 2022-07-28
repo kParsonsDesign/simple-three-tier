@@ -15,6 +15,8 @@ const file = join(__dirname, 'db.json')
 const adapter = new JSONFile(file)
 const db = new Low(adapter)
 
+// Serve static files using express
+app.use(express.static('public'))
 
 
 // ----------------------------------------------------
@@ -73,7 +75,7 @@ app.get('/posts/add/:title/:published', async function(req, res) {
 
   let newPost = {
     'id': highestIndex + 1,
-    'title': title + (highestIndex + 1),
+    'title': title,
     'published': published
   }
 
@@ -95,6 +97,23 @@ app.get('/published/:published', async function(req, res) {
 })
 
 // ----------------------------------------------------
+// Change single post published status
+//    Endpoint: curl http://localhost:3000/posts/status/:id/:published
+// ----------------------------------------------------
+app.get('/posts/status/:id/:published', async function(req, res) {
+  let id = parseInt(req.params.id)
+  let published = req.params.published.toLowerCase() === 'true' ? true : false
+  await db.read()
+
+  let postIndex = db.data.posts.findIndex((post) => {return post.id === id})
+  db.data.posts[postIndex].published = published
+
+  await db.write()
+
+  res.send(db.data.posts)
+})
+
+// ----------------------------------------------------
 // Delete post by id
 //    Endpoint: curl http://localhost:3000/posts/delete/2
 // ----------------------------------------------------
@@ -102,6 +121,7 @@ app.get('/posts/delete/:id', async function(req, res) {
   let id = parseInt(req.params.id)
   await db.read()
   let postIndex = db.data.posts.findIndex((post) => {return post.id === id})
+  if (postIndex === -1) return
   db.data.posts.splice(postIndex, 1)
   await db.write()
   res.send(db.data.posts)
@@ -109,6 +129,9 @@ app.get('/posts/delete/:id', async function(req, res) {
 
 
 
+// ----------------------------------------------------
+// Express Listen
+// ----------------------------------------------------
 app.listen(3000, () => {
   console.log(`Running on port ${port}!`)
 })
