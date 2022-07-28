@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node ./index.js",
     "dev": "nodemon ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "kparsons@arosebooks.com",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "lowdb": "^3.0.0"
   },
   "devDependencies": {
+    "jest": "^28.1.3",
     "nodemon": "^2.0.19"
   }
 }
