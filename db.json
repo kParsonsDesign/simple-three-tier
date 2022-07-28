@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "item 1, initial setup",
+      "published": true
+    },
+    {
+      "id": 2,
+      "title": "item 2, initial setup",
+      "published": true
+    },
+    {
+      "id": 3,
+      "title": "item 3, initial setup",
+      "published": true
+    },
+    {
+      "id": 4,
+      "title": "item 4, initial setup",
+      "published": true
+    },
+    {
+      "id": 5,
+      "title": "item 5, initial setup",
+      "published": true
+    },
+    {
+      "id": 7,
+      "title": "newAdd7",
+      "published": false
+    },
+    {
+      "id": 8,
+      "title": "newAdd8",
+      "published": false
+    },
+    {
+      "id": 9,
+      "title": "newAdd9",
+      "published": true
+    }
+  ]
+}

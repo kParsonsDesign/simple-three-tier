@@ -1,0 +1,21 @@
+{
+  "name": "lowdb",
+  "version": "1.0.0",
+  "description": "Testing Express and LowDB v.3.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kparsons@arosebooks.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "lowdb": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
