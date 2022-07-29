@@ -12,11 +12,11 @@
 
 1. Start your project by creating a root folder with a `package.json` file. Either run <kbd>npm init</kbd> in a terminal from the project root folder or simply make the file by hand.
 
-Run <kbd>npm install express</kbd> to install express in your node environment. Also install a database of your choice. This example uses [lowdb](https://www.npmjs.com/package/lowdb) via <kbd>npm install lowdb</kbd>.
+    Run <kbd>npm install express</kbd> to install express in your node environment. Also install a database of your choice. This example uses [lowdb](https://www.npmjs.com/package/lowdb) via <kbd>npm install lowdb</kbd>.
 
-**Important! Add the line: `"type": "module",` into the package.json file.** This is what makes your node.js environment process your files as [ES6 files](https://v8.dev/features/modules) instead of CommonJS files.
+    **Important! Add the line: `"type": "module",` into the package.json file.** This is what makes your node.js environment process your files as [ES6 files](https://v8.dev/features/modules) instead of CommonJS files.
 
-> package.json
+    *package.json*
 ```json
 {
   "name": "express module with jest testing",
