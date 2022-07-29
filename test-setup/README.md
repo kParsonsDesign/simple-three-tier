@@ -172,41 +172,41 @@ root
     ],
     ```
 
-**Option 2:** Create the `jest.config.js` file manually.
+    **Option 2:** Create the `jest.config.js` file manually.
 
     In your project root folder create a jest.config.js file:
 
-*jest.config.js*
-```js
-export default {
-  transform: {},
-  transformIgnorePatterns: [
-    "\\\\node_modules\\\\",
-    "\\.pnp\\.[^\\\\]+$"
-  ],
-};
-```
+    *jest.config.js*
+    ```js
+    export default {
+      transform: {},
+      transformIgnorePatterns: [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+    };
+    ```
 
-**Option 3:** Add the disable code transform functionality to your `package.json` file.
+    **Option 3:** Add the disable code transform functionality to your `package.json` file.
 
     In the first level of keys in your `package.json` file, add a `"jest": {}` key. As its object value, add the `"transform": {},` and `"transfortransformIgnorePatterns"` keys from above. Remember that since this is a json file you have to wrap the key strings in double quotes.
 
-  *package.json*
-```json
-{
-  "type": "module",
-  "scripts": { },
-  "devDependencies": { },
-  "dependencies": { },
-  "jest": {
-    "transform": {},
-    "transformIgnorePatterns": [
-      "\\\\node_modules\\\\",
-      "\\.pnp\\.[^\\\\]+$"
-    ],
-  }
-}
-```
+    *package.json*
+    ```json
+    {
+      "type": "module",
+      "scripts": { },
+      "devDependencies": { },
+      "dependencies": { },
+      "jest": {
+        "transform": {},
+        "transformIgnorePatterns": [
+          "\\\\node_modules\\\\",
+          "\\.pnp\\.[^\\\\]+$"
+        ],
+      }
+    }
+    ```
 
 4. **Execute <kbd>node</kbd> with <kbd>--experimental-vm-modules</kbd>**.
 
