@@ -159,18 +159,18 @@ root
     In the file you just created, search the file for the lines for `transform` and `transformIgnorePatterns`.
 
     *Set them to (to disable code transforms):*
-```js
-transform: {},
-```
+    ```js
+    transform: {},
+    ```
 
-*and (to process node_modules correctly):*
+    *and (to process node_modules correctly):*
 
-```js
-transformIgnorePatterns: [
-  "\\\\node_modules\\\\",
-  "\\.pnp\\.[^\\\\]+$"
-],
-```
+    ```js
+    transformIgnorePatterns: [
+      "\\\\node_modules\\\\",
+      "\\.pnp\\.[^\\\\]+$"
+    ],
+    ```
 
 **Option 2:** Create the `jest.config.js` file manually.
 
