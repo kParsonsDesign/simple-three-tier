@@ -10,6 +10,7 @@ describe("Sample Test", () => {
 })
 
 describe("Test the root path", () => {
+  // use supertest syntax
   test("Should get response from GET method", async () => {
     return request(app)
       .get("/")
