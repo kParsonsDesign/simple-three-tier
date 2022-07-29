@@ -213,16 +213,16 @@ root
     In the `package.json` file change the `"test"` line to:
 
     *on mac or unix:*
-```
-"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
-```
+    ```
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    ```
 
     *on windows:*
-```
-"test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js"
-```
+    ```
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    ```
 
-**Important for Windows!** In order to make the node environment work on windows **you also have to install [cross-env](https://github.com/kentcdodds/cross-env)!** Run <kbd>npm install --save-dev cross-env</kbd>.
+    **Important for Windows!** In order to make the node environment work on windows **you also have to install [cross-env](https://github.com/kentcdodds/cross-env)!** Run <kbd>npm install --save-dev cross-env</kbd>.
 
 These are all the steps you need to set up Jest v.28 and higher to work with ES6 modules and imports.
 
