@@ -158,23 +158,25 @@ root
 
     In the file you just created, search the file for the lines for `transform` and `transformIgnorePatterns`.
 
-    Set them to (to disable code transforms): 
+    *Set them to (to disable code transforms):*
 ```js
 transform: {},
 ```
 
-    and (to process node_modules correctly):
+*and (to process node_modules correctly):*
+
 ```js
 transformIgnorePatterns: [
   "\\\\node_modules\\\\",
   "\\.pnp\\.[^\\\\]+$"
 ],
 ```
-    **Option 2:** Create the `jest.config.js` file manually.
+
+**Option 2:** Create the `jest.config.js` file manually.
 
     In your project root folder create a jest.config.js file:
 
-    *jest.config.js*
+*jest.config.js*
 ```js
 export default {
   transform: {},
@@ -184,11 +186,12 @@ export default {
   ],
 };
 ```
-    **Option 3:** Add the disable code transform functionality to your `package.json` file.
+
+**Option 3:** Add the disable code transform functionality to your `package.json` file.
 
     In the first level of keys in your `package.json` file, add a `"jest": {}` key. As its object value, add the `"transform": {},` and `"transfortransformIgnorePatterns"` keys from above. Remember that since this is a json file you have to wrap the key strings in double quotes.
 
-    *package.json*
+  *package.json*
 ```json
 {
   "type": "module",
