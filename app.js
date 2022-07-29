@@ -1,7 +1,6 @@
 // Install Express v.4.18.1
 import express from 'express'
 const app = express()
-const port = process.env.NODE_ENV === 'test' ? 3001 : 3000
 
 // Install LowDB v.3.0.0
 import { join, dirname } from 'path'
@@ -132,5 +131,6 @@ app.get('/posts/delete/:id', async function(req, res) {
 // ----------------------------------------------------
 // Export app
 // ----------------------------------------------------
-const server = app.listen(port, () => console.log(`Running on port ${port}!`))
-export { app, server }
+// const server = app.listen(port, () => console.log(`Running on port ${port}!`))
+export { app }
+// module.exports = app
